@@ -4,7 +4,7 @@ from newspaper import Article
 import openai
 
 # OpenAI API 키 입력
-openai_api_key = "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"
+openai_api_key = "sk-"
 client = openai.OpenAI(api_key=openai_api_key)
 
 # ------------------ 함수 정의 ------------------
@@ -90,4 +90,5 @@ if st.button("분석 시작"):
     for i, (link, result) in enumerate(zip(links, results)):
         with st.expander(f"[{i+1}] 기사 보기"):
             st.write(f"🔗 [기사 링크]({link})")
+
             st.write(result)
